@@ -13,6 +13,10 @@ class Html extends Controller{
         $this->view('auth/login');
     }
 
+    public function register(){
+        $this->view('auth/register');
+    }
+
     public function setup(){
         if(Auth::user() == false){
             echo header("location: login");
