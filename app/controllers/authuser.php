@@ -5,9 +5,10 @@ class AuthUser extends Controller{
     public function login(){
         $username = Post::require('username');
         $password = Post::require('password');
-
-        echo $username.'<br>';
-        echo $password.'<br>';
+        
+        if(User::check_username($username)){
+            
+        }
     }
 
     public function logout(){
