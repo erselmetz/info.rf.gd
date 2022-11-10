@@ -16,7 +16,7 @@
             <div class="container">
                 <div class="columns is-centered">
                     <div class="column is-widescreen is-5-tablet is-4-desktop">
-                        <form name="login" action="?u=auth/login" method="POST" class="box">
+                        <form name="login" action="authuser/login" method="POST" class="box">
                             <div class="field">
                                 <label class="label">Email</label>
                                 <div class="control">
@@ -51,17 +51,17 @@
 
     <script src="<?= assets('js/jquery.js')?>"></script>
     <script>
-        $("form[name=login]").submit((e) => {
-            e.preventDefault();
-            $.ajax({
-                type: "POST",
-                url: "authuser/login",
-                data: $("form[name=login]").serialize(),
-                success: function (response) {
-                    console.log(response);
-                }
-            });
-        });
+        // $("form[name=login]").submit((e) => {
+        //     e.preventDefault();
+        //     $.ajax({
+        //         type: "POST",
+        //         url: "authuser/login",
+        //         data: $("form[name=login]").serialize(),
+        //         success: function (response) {
+        //             console.log(response);
+        //         }
+        //     });
+        // });
     </script>
 </body>
 

@@ -1,11 +1,19 @@
 <?php
 
 use Connection\Database as DB;
-use Connection\SQLite as SQLite;
 
 class User extends DB{
 
-    public static function check_username($params){
-        return DB::table('user')->select('username')->where("username = $params")->limit('1')->get();
+    private static $user;
+
+    public static function auth($params){
+        $check = DB::table('users')->where("email = '$params' ")->limit('1')->get();
+
+        if($check != null){
+            User::$user = $check[0];
+        }else{
+            User::$user = false;
+        }
+        return User::$user;
     }
 }
