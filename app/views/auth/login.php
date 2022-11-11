@@ -15,12 +15,12 @@
         <div class="hero-body">
             <div class="container">
                 <div class="columns is-centered">
-                    <div class="column is-widescreen is-5-tablet is-4-desktop">
+                    <div class="column is-widescreen is-7-tablet is-7-desktop">
                         <form name="login" action="authuser/login" method="POST" class="box">
                             <div class="field">
-                                <label class="label">Username</label>
+                                <label class="label">Email</label>
                                 <div class="control">
-                                    <input type="text" name="username" class="input is-primary">
+                                    <input type="text" name="email" class="input is-primary">
                                 </div>
                             </div>
                             <div class="field">
@@ -38,19 +38,8 @@
     </div>
 
     <script src="<?= assets('js/jquery.js')?>"></script>
-    <script>
-        // $("form[name=login]").submit((e) => {
-        //     e.preventDefault();
-        //     $.ajax({
-        //         type: "POST",
-        //         url: "authuser/login",
-        //         data: $("form[name=login]").serialize(),
-        //         success: function (response) {
-        //             console.log(response);
-        //         }
-        //     });
-        // });
-    </script>
+    <script src="<?= assets('js/app.js')?>"></script>
+    <script>login_page()</script>
 </body>
 
 </html>
