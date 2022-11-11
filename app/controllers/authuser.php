@@ -26,10 +26,23 @@ class AuthUser extends Controller{
     }
 
     public function register(){
+
         $firstname = Post::require('firstname');
         $lastname = Post::require('lastname');
         $email = Post::require('email');
         $password = Post::require('password');
+
+        if($firstname != '' && $lastname != '' && $email != '' && $password !=''){
+            User::register_new([
+                "firstname"=> $firstname,
+                "lastname"=> $lastname,
+                "email"=> $email,
+                "password"=> $password,
+            ]);
+            echo json_encode(["status" => true]);
+        }else{
+            echo json_encode(["status" => false]);
+        }
     }
 
     public function logout(){

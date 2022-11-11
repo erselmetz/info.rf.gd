@@ -16,4 +16,8 @@ class User extends DB{
         }
         return User::$user;
     }
+
+    public static function register_new($params = []){
+        echo json_encode($params);
+    }
 }

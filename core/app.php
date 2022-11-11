@@ -10,16 +10,12 @@ class Post{
     private static $var;
 
     public static function require($params){
-
-        if(!isset($_POST[$params])){
-            return null;
-        }else{
+        if(isset($_POST[$params])){
             if($_POST[$params] != null || $_POST[$params] != ''){
                 $a = htmlspecialchars($_POST[$params]);
                 $b = htmlentities($a);
                 $c = strip_tags($b);
-                Post::$var = $c;
-                return Post::$var;
+                return $c;
             }
         }
         return new Post;

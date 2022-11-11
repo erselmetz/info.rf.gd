@@ -30,6 +30,7 @@
                                 </div>
                             </div>
                             <input type="submit" value="Login" class="button is-primary">
+                            <a href="register">Don't have an account?</a>
                         </form>
                     </div>
                 </div>
@@ -39,7 +40,7 @@
 
     <script src="<?= assets('js/jquery.js')?>"></script>
     <script src="<?= assets('js/app.js')?>"></script>
-    <script>login_page()</script>
+    <script>login_page.login()</script>
 </body>
 
 </html>

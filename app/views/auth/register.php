@@ -15,18 +15,24 @@
         <div class="hero-body">
             <div class="container">
                 <div class="columns is-centered">
-                    <div class="column is-widescreen is-5-tablet is-4-desktop">
-                        <form name="login" action="authuser/login" method="POST" class="box">
+                    <div class="column is-widescreen is-7-tablet is-7-desktop">
+                        <form name="register" action="authuser/register" method="POST" class="box">
                             <div class="field">
-                                <label class="label">Email</label>
+                                <label class="label">First name</label>
                                 <div class="control">
-                                    <input type="text" name="username" class="input is-primary">
+                                    <input type="text" name="firstname" class="input is-primary">
                                 </div>
                             </div>
                             <div class="field">
-                                <label class="label">Username</label>
+                                <label class="label">Last name</label>
                                 <div class="control">
-                                    <input type="password" name="password" class="input is-primary">
+                                    <input type="text" name="lastname" class="input is-primary">
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label class="label">Email</label>
+                                <div class="control">
+                                    <input type="email" name="email" class="input is-primary">
                                 </div>
                             </div>
                             <div class="field">
@@ -35,13 +41,8 @@
                                     <input type="password" name="password" class="input is-primary">
                                 </div>
                             </div>
-                            <div class="field">
-                                <label class="label">Repeat-password</label>
-                                <div class="control">
-                                    <input type="password" name="password" class="input is-primary">
-                                </div>
-                            </div>
                             <input type="submit" value="register" class="button is-primary">
+                            <a href="login">Already have an account?</a>
                         </form>
                     </div>
                 </div>
@@ -50,19 +51,8 @@
     </div>
 
     <script src="<?= assets('js/jquery.js')?>"></script>
-    <script>
-        // $("form[name=login]").submit((e) => {
-        //     e.preventDefault();
-        //     $.ajax({
-        //         type: "POST",
-        //         url: "authuser/login",
-        //         data: $("form[name=login]").serialize(),
-        //         success: function (response) {
-        //             console.log(response);
-        //         }
-        //     });
-        // });
-    </script>
+    <script src="<?= assets('js/app.js')?>"></script>
+    <script>register_page.register()</script>
 </body>
 
 </html>
