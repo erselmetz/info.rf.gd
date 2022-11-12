@@ -41,7 +41,7 @@
                                     <input type="password" name="password" class="input is-primary">
                                 </div>
                             </div>
-                            <input type="submit" value="register" class="button is-primary">
+                            <input type="submit" value="Register" class="button is-primary">
                             <a href="login">Already have an account?</a>
                         </form>
                     </div>

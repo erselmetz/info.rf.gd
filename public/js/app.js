@@ -2,6 +2,9 @@ class LoginPage {
     login(){
         $("form[name=login]").submit((e) => {
             e.preventDefault();
+            $("input[value=Login]").on('click', () => {
+                $("input[value=Login]").attr('disabled','true');
+            });
             $.ajax({
                 type: "POST",
                 url: "authuser/login",
@@ -33,6 +36,9 @@ class RegisterPage {
     register() {
         $('form[name=register]').submit( (e) => {
             e.preventDefault();
+            $("input[value=Register]").on('click', () => {
+                $("input[value=Register]").attr('disabled','true');
+            });
             $.ajax({
                 type: "POST",
                 url: "authuser/register",
