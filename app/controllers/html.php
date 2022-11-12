@@ -2,7 +2,7 @@
 
 class Html extends Controller{
     public function index($get){
-        $this->view('home');
+        $this->view('index');
     }
 
     public function home(){
@@ -21,5 +21,17 @@ class Html extends Controller{
         if(Auth::user() == false){
             echo header("location: login");
         }
+    }
+
+    public function forms(){
+        $this->view('forms');
+    }
+
+    public function profile(){
+        $this->view('profile');
+    }
+
+    public function tables(){
+        $this->view('tables');
     }
 }
