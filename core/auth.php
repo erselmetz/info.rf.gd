@@ -3,6 +3,8 @@
 class Auth{
 
     public static function user(){
-        return false;
+        if( !isset($_SESSION['email']) && !isset($_SESSION['password'])){
+            echo header('location: login');
+        }
     }
 }
