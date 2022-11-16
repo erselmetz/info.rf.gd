@@ -2,11 +2,8 @@
 
 class Html extends Controller{
     public function index($get){
+        $this->auth();
         $this->view('index');
-    }
-
-    public function home(){
-        $this->view('home');
     }
 
     public function login(){
@@ -17,21 +14,27 @@ class Html extends Controller{
         $this->view('auth/register');
     }
 
+    public function home(){
+        $this->auth();
+        $this->view('index');
+    }
+
     public function setup(){
-        if(Auth::user() == false){
-            echo header("location: login");
-        }
+        $this->auth();
     }
 
     public function forms(){
+        $this->auth();
         $this->view('forms');
     }
 
     public function profile(){
+        $this->auth();
         $this->view('profile');
     }
 
     public function tables(){
+        $this->auth();
         $this->view('tables');
     }
 }

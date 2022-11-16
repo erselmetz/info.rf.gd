@@ -17,6 +17,9 @@ class AuthUser extends Controller{
             if(password_verify($password, $auth['password'])){
                 $response['email'] = true;
                 $response['password'] = true;
+
+                $_SESSION['email'] = $auth['email'];
+                $_SESSION['password'] = $auth['password'];
             }else{
                 $response['email'] = true;
                 $response['password'] = false;

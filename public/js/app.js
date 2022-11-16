@@ -20,10 +20,12 @@ class LoginPage {
                         } else {
                             $("input[name=email]").removeClass("is-danger");
                             $("input[name=password]").addClass("is-danger");
+                            $("input[name=password]").val("");
                         }
                     } else {
                         $("input[name=email]").addClass("is-danger");
                         $("input[name=password]").removeClass("is-danger");
+                        $("input[name=email]").val("");
                         $("input[name=password]").val("");
                     }
                 },

@@ -9,5 +9,10 @@ class Controller{
     public function error_404(){
         echo 'Not found 404';
     }
-    
+
+    public function auth(){
+        if(Auth::user() == false){
+            echo header('location: login');
+        }
+    }
 }
