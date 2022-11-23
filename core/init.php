@@ -5,7 +5,7 @@ session_start();
 // database
 require_once 'core/database.php';
 
-// Auth
+// auth
 require_once 'core/auth.php';
 
 // autoload model

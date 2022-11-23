@@ -2,7 +2,7 @@
 
 $RewriteBase = '/qrinfo.rf.gd/';
 
-// MySqlite Database
+// MySql Database
 $database = [
     "host"=> "localhost",
     "username"=> "root",
