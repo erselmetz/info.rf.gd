@@ -43,7 +43,7 @@
               <span class="icon"><i class="mdi mdi-chevron-down"></i></span>
             </a>
             <div class="navbar-dropdown">
-              <a href="profile.html" class="navbar-item">
+              <a href="profile" class="navbar-item">
                 <span class="icon"><i class="mdi mdi-account"></i></span>
                 <span>My Profile</span>
               </a>
@@ -93,7 +93,7 @@
         <ul class="menu-list">
           <li>
             <a href="tables" class="has-icon">
-              <span class="icon has-update-mark"><i class="mdi mdi-table"></i></span>
+              <span class="icon"><i class="mdi mdi-table"></i></span>
               <span class="menu-item-label">Tables</span>
             </a>
           </li>
