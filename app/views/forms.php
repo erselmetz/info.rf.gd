@@ -262,34 +262,6 @@
             formsArea.append(p);
         });
 
-        $("#addRow").click(function(){
-            const row = `
-                <div class='form_droppable columns box'>
-
-                </div>
-            `;
-
-            formsArea.append(row);
-
-            $(".form_sortable").sortable();
-            $('.form_draggable').draggable();
-            $('.form_droppable').droppable();
-        });
-
-        $("#addColumn").click(function(){
-            const column = `
-                <div class='form_sortable form_draggable form_droppable column box'>
-                
-                </div>
-            `;
-
-            formsArea.append(column);
-
-            $(".form_sortable").sortable();
-            $('.form_draggable').draggable();
-            $('.form_droppable').droppable();
-        });
-
         $("#dialog_fieldName_button").click(function() {
             var fieldName_value = $("#dialog_fieldName_value");
 
