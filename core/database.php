@@ -3,7 +3,6 @@
 namespace Connection;
 
 use mysqli;
-use PDO;
 
 class Database{
 
